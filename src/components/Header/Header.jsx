@@ -93,13 +93,16 @@ const Header = () => {
                   <nav>
                     <ul className="space-y-4">
                       <li>
-                        <a href="#">Home</a>
+                        <Link to="/home">Home</Link>
                       </li>
                       <li>
-                        <a href="#">About</a>
+                        <Link to="/topics">Topics</Link>
                       </li>
                       <li>
-                        <a href="#">Contact</a>
+                        <Link to="/statistics">Statistics</Link>
+                      </li>
+                      <li>
+                        <Link to="/blog">Blog</Link>
                       </li>
                     </ul>
                   </nav>

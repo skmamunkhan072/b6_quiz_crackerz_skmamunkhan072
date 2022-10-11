@@ -1,4 +1,5 @@
-import React from "react";
+import React, { useContext } from "react";
+import { Link } from "react-router-dom";
 import "./CArt.css";
 const Cart = ({ img }) => {
   return (
@@ -22,9 +23,9 @@ const Cart = ({ img }) => {
           <h2 className="text-xl font-semibold sm:text-2xl">Leroy Jenkins</h2>
         </div>
         <div className="flex justify-center pt-2 space-x-4 items-center">
-          <a
+          <Link
             className="inline-flex items-center space-x-2 text-sm dark:text-violet-400"
-            href="/components"
+            href="/topics"
           >
             <span>Learn More</span>
             <svg
@@ -39,7 +40,7 @@ const Cart = ({ img }) => {
                 clipRule="evenodd"
               ></path>
             </svg>
-          </a>
+          </Link>
         </div>
       </div>
     </div>
