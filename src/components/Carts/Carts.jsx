@@ -27,13 +27,8 @@ const Carts = () => {
         id="cart-wraper"
         className="grid gap-8 lg:grid-cols-3 md:grid-cols-2  sm:max-w-full sm:mx-auto lg:max-w-full"
       >
-        {imge.map((img) => (
-          <Cart
-            img={img}
-            key={img}
-            ShowMor={ShowMor}
-            countNumber={(countNumber += 1)}
-          />
+        {datas.data.map((data) => (
+          <Cart key={data.id} data={data} />
         ))}
       </div>
     </div>

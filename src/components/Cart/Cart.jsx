@@ -1,15 +1,15 @@
 import { Link } from "react-router-dom";
 import "./CArt.css";
-const Cart = ({ img, ShowMor, countNumber, data }) => {
-  const curentIdset = (countNumber -= 1);
+const Cart = ({ data, ShowMor }) => {
+  const { id, logo, name } = data;
   return (
     <div
       id="cart"
       className="flex flex-col justify-center max-w-xs p-6 shadow-md rounded-xl sm:px-12 mx-auto  sm:w-[300px] dark:bg-gray-900 dark:text-gray-100"
     >
       <img
-        src={img}
-        alt=""
+        src={logo}
+        alt="NO found"
         className="w-32 h-32 mx-auto rounded-full dark:bg-gray-500 aspect-square"
       />
       <div className="space-y-4 text-center divide-y divide-gray-700">
@@ -20,14 +20,13 @@ const Cart = ({ img, ShowMor, countNumber, data }) => {
             </span>
             <span className="text-gray-600">— 1 Feb 2020</span>
           </p>
-          <h2 className="text-xl font-semibold sm:text-2xl">Leroy Jenkins</h2>
+          <h2 className="text-xl font-semibold sm:text-2xl">{name}</h2>
         </div>
         <div className="flex justify-center pt-2 space-x-4 items-center">
           <Link
-            id={curentIdset}
-            onClick={() => ShowMor(countNumber)}
+            id={id}
             className="inline-flex items-center space-x-2 text-sm dark:text-violet-400"
-            href="/"
+            to={`/topics/${id}`}
           >
             <span>Learn More</span>
             <svg

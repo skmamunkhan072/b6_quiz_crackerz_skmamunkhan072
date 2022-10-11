@@ -1,8 +1,15 @@
-import React from "react";
-import Carts from "../Carts/Carts";
+import { useLoaderData } from "react-router-dom";
+import QuizWraper from "../QuizWraper/QuizWraper";
 
 const Topics = () => {
-  return <Carts />;
+  const data = useLoaderData();
+  return (
+    <div>
+      {data.data.questions.map((data) => (
+        <QuizWraper key={data.id} data={data} />
+      ))}
+    </div>
+  );
 };
 
 export default Topics;
