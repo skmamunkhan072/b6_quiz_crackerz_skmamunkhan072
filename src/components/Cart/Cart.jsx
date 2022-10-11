@@ -1,7 +1,7 @@
-import React, { useContext } from "react";
 import { Link } from "react-router-dom";
 import "./CArt.css";
-const Cart = ({ img }) => {
+const Cart = ({ img, ShowMor, countNumber, data }) => {
+  const curentIdset = (countNumber -= 1);
   return (
     <div
       id="cart"
@@ -24,8 +24,10 @@ const Cart = ({ img }) => {
         </div>
         <div className="flex justify-center pt-2 space-x-4 items-center">
           <Link
+            id={curentIdset}
+            onClick={() => ShowMor(countNumber)}
             className="inline-flex items-center space-x-2 text-sm dark:text-violet-400"
-            href="/topics"
+            href="/"
           >
             <span>Learn More</span>
             <svg

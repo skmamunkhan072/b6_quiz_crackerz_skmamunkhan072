@@ -1,7 +1,10 @@
 import React, { useContext } from "react";
 import Carts from "../Carts/Carts";
+import { LOdDataContext } from "../Root/Root";
 
 const Home = () => {
+  const datas = useContext(LOdDataContext);
+
   return (
     <div>
       <section className="dark:bg-gray-800 dark:text-gray-100 ">
