@@ -1,7 +1,6 @@
-import logo from "./logo.svg";
+import { RouterProvider } from "react-router-dom";
 import "./App.css";
 import { router } from "./components/Leyout/MainLeyout";
-import { RouterProvider } from "react-router-dom";
 
 function App() {
   return (

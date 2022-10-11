@@ -1,7 +1,5 @@
 import React from "react";
 import { Outlet } from "react-router-dom";
-import Cart from "../Cart/Cart";
-import Footer from "../Footer/Footer";
 import Header from "../Header/Header";
 
 const Root = () => {
@@ -9,8 +7,6 @@ const Root = () => {
     <div>
       <Header />
       <Outlet />
-      <Cart />
-      <Footer></Footer>
     </div>
   );
 };
