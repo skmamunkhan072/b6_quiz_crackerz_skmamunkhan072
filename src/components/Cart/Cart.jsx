@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 import "./CArt.css";
-const Cart = ({ data, ShowMor }) => {
+const Cart = ({ data }) => {
   const { id, logo, name } = data;
   return (
     <div
@@ -16,9 +16,9 @@ const Cart = ({ data, ShowMor }) => {
         <div className="my-2 space-y-1">
           <p className="mt-3 text-xs font-semibold tracking-wide uppercase">
             <span className="transition-colors duration-200 text-deep-purple-accent-400 hover:text-deep-purple-800">
-              weekend
+              {name}
             </span>
-            <span className="text-gray-600">— 1 Feb 2020</span>
+            <span className="text-gray-600"> —--- QUIZ</span>
           </p>
           <h2 className="text-xl font-semibold sm:text-2xl">{name}</h2>
         </div>
@@ -26,9 +26,9 @@ const Cart = ({ data, ShowMor }) => {
           <Link
             id={id}
             className="inline-flex items-center space-x-2 text-sm dark:text-violet-400"
-            to={`/topics/${id}`}
+            to={`/topics/${name}/${id}`}
           >
-            <span>Learn More</span>
+            <span>Learn More Quiz</span>
             <svg
               xmlns="http://www.w3.org/2000/svg"
               viewBox="0 0 20 20"
